@@ -1,2 +1,2 @@
 # desafio-mandacaru
-Desafio final do bootcamp em Java :rocket:
+Desafio final do bootcamp em Java
