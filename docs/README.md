@@ -6,4 +6,4 @@
 
 ## Fluxo da API 
 
-<img src="fluxo-de-assinaturas.svg" alt="drawing" width="600"/>
+<img src="fluxo-de-assinaturas.svg" alt="drawing" width="400"/>
