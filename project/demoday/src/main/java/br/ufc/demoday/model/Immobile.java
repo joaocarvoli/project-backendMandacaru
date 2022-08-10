@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * 
  * 
  */
-@Entity
+@Entity(name = "immobile")
 public class Immobile {
    
 	@Id
@@ -21,7 +21,7 @@ public class Immobile {
     private double squareMetersGround;
     private double squareMetersBuilt;
     private int roomsAmount;
-    // criar bathAmount //
+    private int bathAmount;
     private int garageAmount;
 
     
@@ -34,7 +34,7 @@ public class Immobile {
     
     //Contrutor com paramentros referente a classe Immobile
     
-    public Immobile(int idImmobile, String title, String address, double squareMetersGround, double squareMetersBuilt, int roomsAmount, int garageAmount) {
+    public Immobile(int idImmobile, String title, String address, double squareMetersGround, double squareMetersBuilt, int roomsAmount, int bathAmount, int garageAmount) {
         super();
         this.idImmobile = idImmobile;
         this.title = title;
@@ -42,12 +42,12 @@ public class Immobile {
         this.squareMetersGround = squareMetersGround;
         this.squareMetersBuilt = squareMetersBuilt;
         this.roomsAmount = roomsAmount;
+        this.bathAmount = bathAmount;
         this.garageAmount = garageAmount;
     }
 
-    
     /*
-     * Getters e Setters da classe Immbile 
+     * Getters e Setters da classe Immobile
      */
     
     public int getIdImmobile() {
@@ -98,6 +98,14 @@ public class Immobile {
         this.roomsAmount = roomsAmount;
     }
 
+    public int getBathAmount() {
+        return bathAmount;
+    }
+
+    public void setBathAmount(int bathAmount) {
+        this.bathAmount = bathAmount;
+    }
+
     public int getGarageAmount() {
         return garageAmount;
     }
@@ -112,7 +120,7 @@ public class Immobile {
      * 
      * Método para retorno de dados da classe Immobile   
     */
-    
+
     @Override
     public String toString() {
         return "Immobile{" +
@@ -122,6 +130,7 @@ public class Immobile {
                 ", squareMetersGround=" + squareMetersGround +
                 ", squareMetersBuilt=" + squareMetersBuilt +
                 ", roomsAmount=" + roomsAmount +
+                ", bathAmount=" + bathAmount +
                 ", garageAmount=" + garageAmount +
                 '}';
     }
