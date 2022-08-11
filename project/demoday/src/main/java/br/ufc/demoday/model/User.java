@@ -52,7 +52,6 @@ public class User {
 	}
 
 
-
 	public void setIdUser(int idUser) {
 		this.idUser = idUser;
 	}
