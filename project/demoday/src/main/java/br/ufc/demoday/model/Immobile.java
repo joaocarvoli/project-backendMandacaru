@@ -8,9 +8,9 @@ import javax.persistence.OneToOne;
 /*
  * Classe Imóvel estereotipada com as anotações @Entity, @Id, @GeneretedValue 
  * para administração via Spring implementando JPA e suas variáveis.   
- * 
- * 
  */
+
+//Anotação  @entity parametrizado com o nome da tabela que será gerenciadas via jpa
 @Entity(name = "immobile")
 public class Immobile {
    
@@ -117,9 +117,7 @@ public class Immobile {
     }
 
     
-    /* 
-     * Anotação @Override seguindo o padrão de polimorfismo.
-     * 
+    /* Anotação @Override seguindo o padrão de polimorfismo.
      * Método para retorno de dados da classe Immobile   
     */
 

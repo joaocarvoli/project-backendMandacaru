@@ -6,15 +6,19 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Optional;
 
-
+//Anotação @Sevice para referenciar camada de Negócio
 @Service
 public class UserService {
-    @Autowired
+  
+	//Injeção automática de dependências spring na interface UserRepository
+	@Autowired
     UserRepository userRepository;
 
+	//Tratativas vindas da camada controller,  Classe UserController
+	
     public void save(int idUser, User entity){
         if (idUser != 0) {
-            entity.setIdUser(idUser);
+            entity.setIdUser(idUser); //Requer implementação da classe User
         }
         userRepository.save(entity);
     }
@@ -37,7 +41,7 @@ public class UserService {
     public void delete(int idUser){
         Optional<User> user = userRepository.findById(idUser);
         if(user.isPresent()){
-            userRepository.delete(user);
+            userRepository.delete(user); //Requer implementação da classe User
         }
     }
 }
