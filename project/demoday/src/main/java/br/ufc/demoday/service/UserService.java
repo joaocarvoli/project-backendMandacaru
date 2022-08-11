@@ -23,6 +23,12 @@ public class UserService {
         userRepository.save(entity);
     }
 
+    public void update(int idUser, User entity){
+        // Falta finalizar esse método pois é preciso que a classe User esteja pronta
+        User user = userRepository.find(idUser);
+        //user.
+    }
+
     public User find(int idUser){
         if(idUser == 0){
             return null;
