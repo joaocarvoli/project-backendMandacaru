@@ -2,6 +2,7 @@ package br.ufc.demoday.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 /*
@@ -24,6 +25,7 @@ public class Immobile {
     private int bathAmount;
     private int garageAmount;
 
+    
     
     //Construtor sem parâmentro com método super() explícito.
     
