@@ -20,4 +20,4 @@ sudo ...
 - BackEnd: Java + o framework Spring 
 - Banco de Dados: Postgres
 
-<img src="https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png" width="25"/> <img src="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png" width="25"/> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" width="25"/>
+<img src="/docs/logos/java.png" width="25"/> <img src="/docs/logos/spring.png" width="25"/> <img src="/docs/logos/postgres.svg.png" width="25"/>
