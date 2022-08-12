@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping("/")
     public ResponseEntity<ArrayList<Ad>> findAll(){
-        return new ResponseEntity<ArrayList<User>>(userService.findAll(), HttpStatus.OK);
+        return new ResponseEntity<List<User>>(userService.findAll(), HttpStatus.OK);
     }
     @GetMapping("/{userId}")
     public ResponseEntity<User> find(@PathVariable int userId){

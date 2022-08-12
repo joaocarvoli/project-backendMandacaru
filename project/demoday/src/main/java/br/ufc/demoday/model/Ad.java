@@ -20,9 +20,8 @@ public class Ad {
 	
 	@Id
     @GeneratedValue
-	private int id_ad;   // variável diferente do padrão cammel Case  
-	private boolean adStatus;
-	private int idImmobile;   // Variável não pertence a essa Classe entidade 
+	private int idAd; 
+	private boolean adStatus; 
 	private double price;
 	
 	//Anotações de relacionamento com a classe entidade User
@@ -39,23 +38,20 @@ public class Ad {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Ad(int id_ad, boolean adStatus, int idImmobile, double price, User user) {
+	public Ad(int idAd, boolean adStatus, double price, User user) {
 		super();
-		this.id_ad = id_ad;
+		this.idAd = idAd;
 		this.adStatus = adStatus;
-		this.idImmobile = idImmobile; //requer alteração decorrente das observações logo acima 
 		this.price = price;
 		this.user = user;
 	}
 
-	//requer alteração decorrente das observações logo acima 
-	
-	public int getId_ad() {
-		return id_ad;
+	public int getIdAd() {
+		return idAd;
 	}
 
-	public void setId_ad(int id_ad) {
-		this.id_ad = id_ad;
+	public void setIdAd(int idAd) {
+		this.idAd = idAd;
 	}
 
 	public boolean isAdStatus() {
@@ -64,14 +60,6 @@ public class Ad {
 
 	public void setAdStatus(boolean adStatus) {
 		this.adStatus = adStatus;
-	}
-
-	public int getIdImmobile() {
-		return idImmobile;
-	}
-
-	public void setIdImmobile(int idImmobile) {
-		this.idImmobile = idImmobile;
 	}
 
 	public double getPrice() {
@@ -90,15 +78,12 @@ public class Ad {
 		this.user = user;
 	}
 
-	
-	
 	@Override
 	public String toString() {
-		
-		return "Ad [id_ad=" + id_ad + ", adStatus=" + adStatus + ", idImmobile=" + idImmobile + ", price=" + price
-				+ ", user=" + user + "]";
+		return "Ad [idAd=" + idAd + ", adStatus=" + adStatus + ", price=" + price + ", user=" + user + "]";
 	}
-
+	
+	
 	
 	
 	
