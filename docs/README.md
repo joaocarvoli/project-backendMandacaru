@@ -11,4 +11,4 @@ O diagrama abaixo representa o fluxo da aplicação como um todo
 
 ## Fluxo do Banco de dados e Arquitetura
 
-[Banco de dados + Arquitetura](diagramas/classes.svg)
+[Banco de dados + Arquitetura](banco-de-dados-e-arquitetura.md)
