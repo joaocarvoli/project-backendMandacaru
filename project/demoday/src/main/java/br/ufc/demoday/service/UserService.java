@@ -45,9 +45,9 @@ public class UserService {
     }
 
     public void delete(int idUser){
-        Optional<User> user = userRepository.findById(idUser);
-        if(user.isPresent()){
-            userRepository.delete(user); //Requer implementação da classe User
+        Optional<User> user = userRepository.findById(idUser);  // Necessário utilizar o método find e instanciar o objeto user sem o container Optional 
+        if(user.isPresent()){//Requer alterar a condição lógica
+            userRepository.delete(user); 
         }
     }
 }
