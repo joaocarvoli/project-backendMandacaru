@@ -1,9 +1,14 @@
-# Documentos
+# Fluxo da aplicação
 
-## O diagrama abaixo representa o fluxo do banco de dados
+O diagrama abaixo representa o fluxo da aplicação como um todo 
 
-<img src="Imoveis%20Diagram.svg" alt="drawing" width="600"/>
+...
+
 
 ## Fluxo da API 
 
 <img src="diagramas/fluxo-de-assinaturas.svg" alt="drawing" width="400"/>
+
+## Fluxo do Banco de dados e Arquitetura
+
+[Banco de dados + Arquitetura](diagramas/classes.svg)
