@@ -28,20 +28,32 @@ public class User {
     private String phone;
     private String address;
 
-
     //Anotações de relacionamento com a classe entidade Ad
-    @OneToMany
-    @JoinColumn(name = "teste_ad"); // name diferente do campo definido na classe entidade Ad
-    @JsonIgnore
-    private Ad ad;
 
     //criar variavel lista da classe entidade Ad contendo id_ad
+    @OneToMany(mappedBy = "User")
+    private List<Ad> ad;
+
+    
+    //Criar contrutor parametrizado com as variáveis acima declaradas
+     public User(int idUSer, String name, String email, String password, String cpf, String phone, String address,
+            List<Ad> ad) {
+        this.idUSer = idUSer;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.cpf = cpf;
+        this.phone = phone;
+        this.address = address;
+        this.ad = ad;
+    }
+
     public User(){
         super();
     }
 
 
-    //Criar contrutor parametrizado com as variáveis acima declaradas
+
     public int getIdUSer() {
         return idUSer;
     }
@@ -106,6 +118,21 @@ public class User {
         this.address = address;
     }
 
+
+    public List<Ad> getAd() {
+        return ad;
+    }
+
+
+    public void setAd(List<Ad> ad) {
+        this.ad = ad;
+    }
+
     //Criar metodo tostring com anotação @overrider e retorno
+    @Override
+    public String toString() {
+        return "User [ad=" + ad + ", address=" + address + ", cpf=" + cpf + ", email=" + email + ", idUSer=" + idUSer
+                + ", name=" + name + ", password=" + password + ", phone=" + phone + "]";
+    }
 
 }
