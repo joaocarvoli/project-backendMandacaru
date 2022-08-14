@@ -1,5 +1,7 @@
 package br.ufc.demoday.model;
 
+import java.util.List;
+
 import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 
 //Anotação  @Entity parametrizado com o nome da tabela que será gerenciadas via jpa
-@Entity(name = "User")
+@Entity(name = "user")
 public class User {
 
     @Id
@@ -27,15 +29,10 @@ public class User {
     private String cpf;
     private String phone;
     private String address;
-
-    //Anotações de relacionamento com a classe entidade Ad
-
-    //criar variavel lista da classe entidade Ad contendo id_ad
-    @OneToMany(mappedBy = "User")
-    private List<Ad> ad;
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "user_ad")
+    private  List<Ad> ad;
     
-    //Criar contrutor parametrizado com as variáveis acima declaradas
      public User(int idUSer, String name, String email, String password, String cpf, String phone, String address,
             List<Ad> ad) {
         this.idUSer = idUSer;
@@ -52,22 +49,17 @@ public class User {
         super();
     }
 
-
-
     public int getIdUSer() {
         return idUSer;
     }
-
 
     public void setIdUSer(int idUSer) {
         this.idUSer = idUSer;
     }
 
-
     public String getName() {
         return name;
     }
-
 
     public void setName(String name) {
         this.name = name;
@@ -77,7 +69,6 @@ public class User {
         return email;
     }
 
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -85,7 +76,6 @@ public class User {
     public String getPassword() {
         return password;
     }
-
 
     public void setPassword(String password) {
         this.password = password;
@@ -95,7 +85,6 @@ public class User {
         return cpf;
     }
 
-
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
@@ -103,7 +92,6 @@ public class User {
     public String getPhone() {
         return phone;
     }
-
 
     public void setPhone(String phone) {
         this.phone = phone;
@@ -113,26 +101,22 @@ public class User {
         return address;
     }
 
-
     public void setAddress(String address) {
         this.address = address;
     }
-
 
     public List<Ad> getAd() {
         return ad;
     }
 
-
     public void setAd(List<Ad> ad) {
         this.ad = ad;
     }
-
-    //Criar metodo tostring com anotação @overrider e retorno
+   
     @Override
     public String toString() {
         return "User [ad=" + ad + ", address=" + address + ", cpf=" + cpf + ", email=" + email + ", idUSer=" + idUSer
-                + ", name=" + name + ", password=" + password + ", phone=" + phone + "]";
+                + ", name=" + name + ", password=" + password + ", phone=" + phone + "Ad= " + ad +"]";
     }
 
 }

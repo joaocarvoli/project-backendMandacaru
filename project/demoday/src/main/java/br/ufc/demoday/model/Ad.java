@@ -1,10 +1,14 @@
 package br.ufc.demoday.model;
 
+import java.lang.StackWalker.Option;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -23,27 +27,26 @@ public class Ad {
 	private int idAd; 
 	private boolean adStatus; 
 	private double price;
-	
-	//Anotações de relacionamento com a classe entidade User
 	@ManyToOne
-	@JoinColumn(name="id_user") //name da tabela diferente do padrão cammel case e da Classe entidade User
-	
-	//>>>>>>>>incluir anotação de relação um para um com a Classe entidade Immobile e junção   
-	
+	@JoinColumn(name="id_user") //ok
 	@JsonIgnore
-	private User user;
+	private User user_ad;
+	@OneToOne
+	@JoinColumn(name = "id_immobile") //ok
+	private Immobile immobile;
 	
 	public Ad() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Ad(int idAd, boolean adStatus, double price, User user) {
+	public Ad(int idAd, boolean adStatus, double price, User user, Immobile immobile) {
 		super();
 		this.idAd = idAd;
 		this.adStatus = adStatus;
 		this.price = price;
-		this.user = user;
+		this.user_ad = user;
+		this.immobile = immobile;
 	}
 
 	public int getIdAd() {
@@ -71,16 +74,24 @@ public class Ad {
 	}
 
 	public User getUser() {
-		return user;
+		return user_ad;
 	}
 
 	public void setUser(User user) {
-		this.user = user;
+		this.user_ad = user;
+	}
+
+	public Immobile getImmobile() {
+		return immobile;
+	}
+
+	public void setImmobile(Immobile immobile) {
+		this.immobile = immobile;
 	}
 
 	@Override
 	public String toString() {
-		return "Ad [idAd=" + idAd + ", adStatus=" + adStatus + ", price=" + price + ", user=" + user + "]";
+		return "Ad [idAd= " + idAd + ", adStatus= " + adStatus + ", price= " + price + ", user= " + user_ad + ", Immobile= " + immobile +"]";
 	}
 	
 	

@@ -2,6 +2,7 @@ package br.ufc.demoday.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 
@@ -10,7 +11,7 @@ import javax.persistence.OneToOne;
  * para administração via Spring implementando JPA e suas variáveis.   
  */
 
-//Anotação  @entity parametrizado com o nome da tabela que será gerenciadas via jpa
+//Anotação  @Entity parametrizado com o nome da tabela que será gerenciadas via jpa
 @Entity(name = "immobile")
 public class Immobile {
    
@@ -24,9 +25,10 @@ public class Immobile {
     private int roomsAmount;
     private int bathAmount;
     private int garageAmount;
-
-    
-    
+    @OneToOne
+   	@JoinColumn(name = "id_ad") //ok
+    private Ad ad;
+       
     //Construtor sem parâmentro com método super() explícito.
     
     public Immobile() {
@@ -46,6 +48,7 @@ public class Immobile {
         this.roomsAmount = roomsAmount;
         this.bathAmount = bathAmount;
         this.garageAmount = garageAmount;
+        
     }
 
     /*

@@ -17,16 +17,41 @@ public class UserService {
 	//Tratativas vindas da camada controller,  Classe UserController
 	
     public void save(int idUser, User entity){
-        if (idUser != 0) {
-            entity.setIdUser(idUser); //Requer implementação da classe User
-        }
-        userRepository.save(entity);
+        
+    	User user =  new User();
+    	
+    	if (idUser != 0) {
+  
+    		entity.setIdUSer(idUser); 
+            user.setName(entity.getName());
+    		user.setAddress(entity.getAddress());
+            user.setCpf(entity.getCpf());
+            user.setEmail(entity.getEmail());
+            user.setPassword(entity.getPassword());
+            user.setPhone(entity.getPhone());
+            userRepository.save(entity);
+    	}
+        
+        
     }
 
     public void update(int idUser, User entity){
-        // Falta finalizar esse método pois é preciso que a classe User esteja pronta
-        User user = userRepository.find(idUser);
-        //user.
+        
+
+		// Falta finalizar esse método pois é preciso que a classe User esteja pronta
+        User user = new User();
+    	
+    	if (idUser != 0) {
+    		 
+            user.setName(entity.getName());
+    		user.setAddress(entity.getAddress());
+            user.setCpf(entity.getCpf());
+            user.setEmail(entity.getEmail());
+            user.setPassword(entity.getPassword());
+            user.setPhone(entity.getPhone());
+            userRepository.save(entity);
+    	}
+       
     }
 
     public User find(int idUser){
@@ -45,8 +70,8 @@ public class UserService {
     }
 
     public void delete(int idUser){
-        Optional<User> user = userRepository.findById(idUser);  // Necessário utilizar o método find e instanciar o objeto user sem o container Optional 
-        if(user.isPresent()){//Requer alterar a condição lógica
+        User user = find(idUser);  
+        if(idUser!= 0){
             userRepository.delete(user); 
         }
     }
