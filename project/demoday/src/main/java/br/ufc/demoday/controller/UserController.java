@@ -1,7 +1,5 @@
 package br.ufc.demoday.controller;
-import br.ufc.demoday.model.Ad;
 import br.ufc.demoday.model.User;
-import br.ufc.demoday.service.AdService;
 import br.ufc.demoday.service.UserService;
 
 import java.util.ArrayList;
@@ -27,8 +25,8 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/")
-    public ResponseEntity<ArrayList<Ad>> findAll(){
-        return new ResponseEntity<List<User>>(userService.findAll(), HttpStatus.OK);
+    public ResponseEntity<ArrayList<User>> findAll(){
+        return new ResponseEntity<ArrayList<User>>(userService.findAll(), HttpStatus.OK);
     }
     @GetMapping("/{userId}")
     public ResponseEntity<User> find(@PathVariable int userId){
