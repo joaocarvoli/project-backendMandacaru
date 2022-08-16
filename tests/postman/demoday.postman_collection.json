@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "7c7444ea-ca7c-4702-a50a-0c0579cbbafa",
+		"name": "demoday",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16987712"
+	},
+	"item": [
+		{
+			"name": "immobile",
+			"item": [
+				{
+					"name": "Lista de imóveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista imóvel por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar imóvel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"\",\n    \"address\":\"\",\n    \"squareMetersGround\":\"\",\n    \"squareMetersBuilt\":\"\",\n    \"roomsAmount\":\"\",\n    \"bathAmount\":\"\",\n    \"garageAmount\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/0",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de imóvel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"\",\n    \"address\":\"\",\n    \"squareMetersGround\":\"\",\n    \"squareMetersBuilt\":\"\",\n    \"roomsAmount\":\"\",\n    \"bathAmount\":\"\",\n    \"garageAmount\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar imóvel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Lista de usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista usuários por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar imóvel Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"email\":\"\",\n    \"password\":\"\",\n    \"cpf\":\"\",\n    \"phone\":\"\",\n    \"address\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de imóvel Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"email\":\"\",\n    \"password\":\"\",\n    \"cpf\":\"\",\n    \"phone\":\"\",\n    \"address\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar imóvel Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ad",
+			"item": [
+				{
+					"name": "Lista de anúncios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista anúncios por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar anúncios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adStatus\":\"\",\n    \"price\":\"\",\n    \"id_user\":\"\",\n    \"id_immobile\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de anúncio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adStatus\":\"\",\n    \"price\":\"\",\n    \"id_user\":\"\",\n    \"id_immobile\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar anúncio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ADDRESS",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "PORT",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
