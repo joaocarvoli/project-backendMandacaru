@@ -30,9 +30,9 @@ public class ImmobileController {
 
     }
     @GetMapping("/{immobileId}")
-    public ResponseEntity<Immobile> find(@PathVariable int userId){
+    public ResponseEntity<Immobile> find(@PathVariable int immobileId){
 
-        return new ResponseEntity<Immobile>(immobileService.find(userId), HttpStatus.OK);
+        return new ResponseEntity<Immobile>(immobileService.find(immobileId), HttpStatus.OK);
     }
     @PostMapping("/{immobileId}")
     public void save(@PathVariable int immobileId, @RequestBody Immobile immobile){
