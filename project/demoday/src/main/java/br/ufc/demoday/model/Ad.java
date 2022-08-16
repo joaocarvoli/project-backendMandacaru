@@ -13,19 +13,19 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 /*
- * Classe Imóvel estereotipada com as anotações @Entity, @Id, @GeneretedValue 
- * para administração via Spring implementando JPA e suas variáveis.   
+ * Classe Imóvel estereotipada com as anotações @Entity, @Id, @GeneretedValue
+ * para administração via Spring implementando JPA e suas variáveis.
  */
 
 //Anotação  @Entity parametrizado com o nome da tabela que será gerenciadas via jpa
 @Entity(name = "ad")
 public class Ad {
-	
-	
+
+
 	@Id
-    @GeneratedValue
-	private int idAd; 
-	private boolean adStatus; 
+	@GeneratedValue
+	private int idAd;
+	private boolean adStatus;
 	private double price;
 	@ManyToOne
 	@JoinColumn(name="id_user") //ok
@@ -34,7 +34,7 @@ public class Ad {
 	@OneToOne
 	@JoinColumn(name = "id_immobile") //ok
 	private Immobile immobile;
-	
+
 	public Ad() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -93,14 +93,14 @@ public class Ad {
 	public String toString() {
 		return "Ad [idAd= " + idAd + ", adStatus= " + adStatus + ", price= " + price + ", user= " + user_ad + ", Immobile= " + immobile +"]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
 }

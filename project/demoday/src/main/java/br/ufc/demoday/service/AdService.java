@@ -14,47 +14,47 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AdService {
-	
-	
-	//Injeção automática de dependências spring na interface AdRepository
-	@Autowired
+
+
+    //Injeção automática de dependências spring na interface AdRepository
+    @Autowired
     AdRepository AdRepository;
 
-	//Tratativas vindas da camada controller,  Classe AdController
-	
+    //Tratativas vindas da camada controller,  Classe AdController
+
     public void save(int idAd, Ad entity){
-        
-    	Ad ad =  new Ad();
-    	
-    	if (idAd != 0) {
-  
-    		entity.setIdAd(idAd); 
+
+        Ad ad =  new Ad();
+
+        if (idAd != 0) {
+
+            entity.setIdAd(idAd);
             ad.setImmobile(entity.getImmobile());;
-    		ad.setAdStatus(entity.isAdStatus());
-    		ad.setPrice(entity.getPrice());
-    		ad.setUser(entity.getUser());
+            ad.setAdStatus(entity.isAdStatus());
+            ad.setPrice(entity.getPrice());
+            ad.setUser(entity.getUser());
             AdRepository.save(entity);
-    	}
-        
-        
+        }
+
+
     }
 
     public void update(int idAd, Ad entity){
-        
 
-		// Falta finalizar esse método pois é preciso que a classe User esteja pronta
+
+        // Falta finalizar esse método pois é preciso que a classe User esteja pronta
         Ad ad = new Ad();
-    	
-    	if (idAd != 0) {
-    		 
-    	//	entity.getIdAd(); 
+
+        if (idAd != 0) {
+
+            //	entity.getIdAd();
             ad.setImmobile(entity.getImmobile());;
-    		ad.setAdStatus(entity.isAdStatus());
-    		ad.setPrice(entity.getPrice());
-    		ad.setUser(entity.getUser());
+            ad.setAdStatus(entity.isAdStatus());
+            ad.setPrice(entity.getPrice());
+            ad.setUser(entity.getUser());
             AdRepository.save(entity);
-    	}
-       
+        }
+
     }
 
     public Ad find(int idAd){
@@ -73,12 +73,12 @@ public class AdService {
     }
 
     public void delete(int idAd){
-        Ad ad = find(idAd);  
+        Ad ad = find(idAd);
         if(idAd!= 0){
-            AdRepository.delete(ad); 
+            AdRepository.delete(ad);
         }
     }
-	
-	
+
+
 
 }

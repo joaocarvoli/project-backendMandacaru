@@ -7,11 +7,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//Service
+
 @Service
 public class ImmobileService {
-	
-	@Autowired
+
+    @Autowired
     ImmobileRepository immobileRepository;
     public void save(int idImmobile, Immobile entity){
         if (idImmobile != 0) {
@@ -20,11 +20,11 @@ public class ImmobileService {
         immobileRepository.save(entity);
     }
 
-    
+
     public void update(int idImmobile, Immobile entity){
         Optional<Immobile> immobile = immobileRepository.findById(idImmobile);
         if(immobile.isPresent()){
-        	immobileRepository.save(entity);
+            immobileRepository.save(entity);
         }
     }
 
@@ -45,11 +45,11 @@ public class ImmobileService {
 
     public void delete(int idImmobile){
         Optional<Immobile> immobile = immobileRepository.findById(idImmobile); // Necessário utilizar o método find e instanciar o objeto immobile sem o container Optional 
-        
+
         if(immobile.isPresent()){
             immobileRepository.delete(immobile.get());
         }
-        
+
     }
-	
+
 }

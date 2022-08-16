@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 
 //Anotação  @Entity parametrizado com o nome da tabela que será gerenciadas via jpa
-@Entity(name = "user")
+@Entity(name = "users")
 public class User {
 
     @Id
@@ -29,12 +29,13 @@ public class User {
     private String cpf;
     private String phone;
     private String address;
-    @JsonIgnore
     @OneToMany(mappedBy = "user_ad")
+    @JsonIgnore
     private  List<Ad> ad;
-    
-     public User(int idUSer, String name, String email, String password, String cpf, String phone, String address,
-            List<Ad> ad) {
+
+
+    public User(int idUSer, String name, String email, String password, String cpf, String phone, String address,
+                List<Ad> ad) {
         this.idUSer = idUSer;
         this.name = name;
         this.email = email;
@@ -112,7 +113,7 @@ public class User {
     public void setAd(List<Ad> ad) {
         this.ad = ad;
     }
-   
+
     @Override
     public String toString() {
         return "User [ad=" + ad + ", address=" + address + ", cpf=" + cpf + ", email=" + email + ", idUSer=" + idUSer

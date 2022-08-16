@@ -12,8 +12,8 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping(path = "/api/ads")
 public class AdController {
-   
-	@Autowired
+
+    @Autowired
     AdService adService;
 
     @GetMapping("/")

@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/api/users")
 public class UserController {
-	
+
     @Autowired
     UserService userService;
 

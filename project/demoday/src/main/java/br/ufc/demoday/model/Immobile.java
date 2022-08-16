@@ -7,18 +7,18 @@ import javax.persistence.OneToOne;
 
 
 /*
- * Classe Imóvel estereotipada com as anotações @Entity, @Id, @GeneretedValue 
- * para administração via Spring implementando JPA e suas variáveis.   
+ * Classe Imóvel estereotipada com as anotações @Entity, @Id, @GeneretedValue
+ * para administração via Spring implementando JPA e suas variáveis.
  */
 
 //Anotação  @Entity parametrizado com o nome da tabela que será gerenciadas via jpa
 @Entity(name = "immobile")
 public class Immobile {
-   
-	@Id
+
+    @Id
     @GeneratedValue
     private int idImmobile;
-    private String title; 
+    private String title;
     private String address;
     private double squareMetersGround;
     private double squareMetersBuilt;
@@ -26,18 +26,18 @@ public class Immobile {
     private int bathAmount;
     private int garageAmount;
     @OneToOne
-   	@JoinColumn(name = "id_ad") //ok
+    @JoinColumn(name = "id_ad") //ok
     private Ad ad;
-       
+
     //Construtor sem parâmentro com método super() explícito.
-    
+
     public Immobile() {
         super();
     }
 
-    
+
     //Contrutor com paramentros referente a classe Immobile
-    
+
     public Immobile(int idImmobile, String title, String address, double squareMetersGround, double squareMetersBuilt, int roomsAmount, int bathAmount, int garageAmount) {
         super();
         this.idImmobile = idImmobile;
@@ -48,13 +48,13 @@ public class Immobile {
         this.roomsAmount = roomsAmount;
         this.bathAmount = bathAmount;
         this.garageAmount = garageAmount;
-        
+
     }
 
     /*
      * Getters e Setters da classe Immobile
      */
-    
+
     public int getIdImmobile() {
         return idImmobile;
     }
@@ -119,10 +119,10 @@ public class Immobile {
         this.garageAmount = garageAmount;
     }
 
-    
+
     /* Anotação @Override seguindo o padrão de polimorfismo.
-     * Método para retorno de dados da classe Immobile   
-    */
+     * Método para retorno de dados da classe Immobile
+     */
 
     @Override
     public String toString() {
