@@ -11,7 +11,7 @@ O foco do desenvolvimento é no BackEnd da Aplicação em Java.
 ## Como usar?
 
 ```python
-sudo ...
+...
 ```
 
 ## Tecnologias
