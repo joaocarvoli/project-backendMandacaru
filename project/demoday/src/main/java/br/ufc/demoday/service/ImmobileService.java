@@ -24,6 +24,7 @@ public class ImmobileService {
     public void update(int idImmobile, Immobile entity){
         Optional<Immobile> immobile = immobileRepository.findById(idImmobile);
         if(immobile.isPresent()){
+            entity.setIdImmobile(immobile.get().getIdImmobile());
             immobileRepository.save(entity);
         }
     }
