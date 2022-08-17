@@ -15,13 +15,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/immobile",
+							"raw": "{{API_ADDRESS}}/api/immobile/",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
-								"immobile"
+								"immobile",
+								""
 							]
 						}
 					},
@@ -33,14 +34,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"raw": "{{API_ADDRESS}}/api/immobile/4",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"immobile",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -53,7 +54,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\":\"\",\n    \"address\":\"\",\n    \"squareMetersGround\":\"\",\n    \"squareMetersBuilt\":\"\",\n    \"roomsAmount\":\"\",\n    \"bathAmount\":\"\",\n    \"garageAmount\":\"\"\n}",
+							"raw": "{\n    \"title\":\"Casa do Mazin\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\",\n    \"squareMetersGround\":\"100\",\n    \"squareMetersBuilt\":\"67\",\n    \"roomsAmount\":\"7\",\n    \"bathAmount\":\"4\",\n    \"garageAmount\":\"2\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -81,7 +82,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\":\"\",\n    \"address\":\"\",\n    \"squareMetersGround\":\"\",\n    \"squareMetersBuilt\":\"\",\n    \"roomsAmount\":\"\",\n    \"bathAmount\":\"\",\n    \"garageAmount\":\"\"\n}",
+							"raw": "{\n    \"title\":\"Casa do Mazin\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\",\n    \"squareMetersGround\":\"100\",\n    \"squareMetersBuilt\":\"91\",\n    \"roomsAmount\":\"10\",\n    \"bathAmount\":\"4\",\n    \"garageAmount\":\"2\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -89,14 +90,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"raw": "{{API_ADDRESS}}/api/immobile/5",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"immobile",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -108,14 +109,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/immobile/1",
+							"raw": "{{API_ADDRESS}}/api/immobile/3",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"immobile",
-								"1"
+								"3"
 							]
 						}
 					},
@@ -132,13 +133,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/users",
+							"raw": "{{API_ADDRESS}}/api/users/",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
-								"users"
+								"users",
+								""
 							]
 						}
 					},
@@ -150,27 +152,27 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/users/1",
+							"raw": "{{API_ADDRESS}}/api/users/7",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"1"
+								"7"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Cadastrar imóvel Copy",
+					"name": "Cadastrar usuário",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"\",\n    \"email\":\"\",\n    \"password\":\"\",\n    \"cpf\":\"\",\n    \"phone\":\"\",\n    \"address\":\"\"\n}",
+							"raw": "{\n    \"name\":\"João\",\n    \"email\":\"jv@gmail.com\",\n    \"password\":\"123456\",\n    \"cpf\":\"12345678910\",\n    \"phone\":\"85997046654\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -178,14 +180,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/users/1",
+							"raw": "{{API_ADDRESS}}/api/users/0",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"1"
+								"0"
 							]
 						}
 					},
@@ -198,7 +200,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"\",\n    \"email\":\"\",\n    \"password\":\"\",\n    \"cpf\":\"\",\n    \"phone\":\"\",\n    \"address\":\"\"\n}",
+							"raw": "{\n    \"name\":\"João\",\n    \"email\":\"jv@gmail.com\",\n    \"password\":\"123456\",\n    \"cpf\":\"05668104338\",\n    \"phone\":\"85997046654\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -206,14 +208,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/users/1",
+							"raw": "{{API_ADDRESS}}/api/users/2",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -225,14 +227,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/users/1",
+							"raw": "{{API_ADDRESS}}/api/users/2",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -249,13 +251,21 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads",
+							"raw": "{{API_ADDRESS}}/api/ads/",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
-								"ads"
+								"ads",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -267,14 +277,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"raw": "{{API_ADDRESS}}/api/ads/16",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"ads",
-								"1"
+								"16"
 							]
 						}
 					},
@@ -287,7 +297,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"adStatus\":\"\",\n    \"price\":\"\",\n    \"id_user\":\"\",\n    \"id_immobile\":\"\"\n}",
+							"raw": "{\n    \"adStatus\":\"false\",\n    \"price\":\"80000\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -295,14 +305,24 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"raw": "{{API_ADDRESS}}/api/ads/0?idUser=8&idImmobile=5",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"ads",
-								"1"
+								"0"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "8"
+								},
+								{
+									"key": "idImmobile",
+									"value": "5"
+								}
 							]
 						}
 					},
@@ -315,7 +335,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"adStatus\":\"\",\n    \"price\":\"\",\n    \"id_user\":\"\",\n    \"id_immobile\":\"\"\n}",
+							"raw": "{\n    \"adStatus\":\"false\",\n    \"price\":\"120000\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -323,14 +343,21 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"raw": "{{API_ADDRESS}}/api/ads/19",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"ads",
-								"1"
+								"19"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -342,14 +369,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/1",
+							"raw": "{{API_ADDRESS}}/api/ads/17",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"ads",
-								"1"
+								"17"
 							]
 						}
 					},
