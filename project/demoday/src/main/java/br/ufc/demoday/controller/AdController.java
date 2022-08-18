@@ -34,8 +34,8 @@ public class AdController {
         adService.update(idAd, ad);
     }
 
-    @DeleteMapping("/{adId}")
-    public void delete(@PathVariable int adId){
-        adService.delete(adId);
+    @DeleteMapping("/{idAd}")
+    public void delete(@PathVariable int idAd){
+        adService.delete(idAd);
     }
 }
