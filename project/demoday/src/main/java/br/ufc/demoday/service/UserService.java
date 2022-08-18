@@ -17,38 +17,16 @@ public class UserService {
     //Tratativas vindas da camada controller,  Classe UserController
 
     public void save(int idUser, User entity){
-
-        User user =  new User();
-
         if (idUser != 0) {
-
             entity.setIdUSer(idUser);
-            user.setName(entity.getName());
-            user.setAddress(entity.getAddress());
-            user.setCpf(entity.getCpf());
-            user.setEmail(entity.getEmail());
-            user.setPassword(entity.getPassword());
-            user.setPhone(entity.getPhone());
-            userRepository.save(entity);
         }
-
-
+        userRepository.save(entity);
     }
 
     public void update(int idUser, User entity){
-
-
-        // Falta finalizar esse método pois é preciso que a classe User esteja pronta
-        User user = new User();
-
-        if (idUser != 0) {
-
-            user.setName(entity.getName());
-            user.setAddress(entity.getAddress());
-            user.setCpf(entity.getCpf());
-            user.setEmail(entity.getEmail());
-            user.setPassword(entity.getPassword());
-            user.setPhone(entity.getPhone());
+        Optional<User> user = userRepository.findById(idUser);
+        if(user.isPresent()){
+            entity.setIdUSer(user.get().getIdUSer());
             userRepository.save(entity);
         }
 
@@ -70,9 +48,9 @@ public class UserService {
     }
 
     public void delete(int idUser){
-        User user = find(idUser);
-        if(idUser!= 0){
-            userRepository.delete(user);
+        Optional<User> user = userRepository.findById(idUser);
+        if(user.isPresent()){
+            userRepository.delete(user.get());
         }
     }
 }

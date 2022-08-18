@@ -3,11 +3,11 @@ import br.ufc.demoday.model.Ad;
 import br.ufc.demoday.model.Immobile;
 import br.ufc.demoday.model.User;
 import br.ufc.demoday.repository.AdRepository;
-import br.ufc.demoday.repository.UserRepository;
-
 import java.util.ArrayList;
 import java.util.Optional;
 
+import br.ufc.demoday.repository.ImmobileRepository;
+import br.ufc.demoday.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,50 +18,44 @@ public class AdService {
 
     //Injeção automática de dependências spring na interface AdRepository
     @Autowired
-    AdRepository AdRepository;
+    AdRepository adRepository;
+    @Autowired
+    ImmobileRepository immobileRepository;
+    @Autowired
+    UserRepository userRepository;
 
     //Tratativas vindas da camada controller,  Classe AdController
 
-    public void save(int idAd, Ad entity){
-
-        Ad ad =  new Ad();
-
+    public void save(int idAd, int idUser, int idImmobile, Ad entity){
         if (idAd != 0) {
-
             entity.setIdAd(idAd);
-            ad.setImmobile(entity.getImmobile());;
-            ad.setAdStatus(entity.isAdStatus());
-            ad.setPrice(entity.getPrice());
-            ad.setUser(entity.getUser());
-            AdRepository.save(entity);
         }
-
-
+        Optional<Immobile> immobile = immobileRepository.findById(idImmobile);
+        Optional<User> user = userRepository.findById(idUser);
+        if(immobile.isPresent()){
+            entity.setImmobile(immobile.get());
+        }
+        if(user.isPresent()) {
+            entity.setUser(user.get());
+        }
+        adRepository.save(entity);
     }
 
     public void update(int idAd, Ad entity){
-
-
-        // Falta finalizar esse método pois é preciso que a classe User esteja pronta
-        Ad ad = new Ad();
-
-        if (idAd != 0) {
-
-            //	entity.getIdAd();
-            ad.setImmobile(entity.getImmobile());;
-            ad.setAdStatus(entity.isAdStatus());
-            ad.setPrice(entity.getPrice());
-            ad.setUser(entity.getUser());
-            AdRepository.save(entity);
+        Optional<Ad> ad = adRepository.findById(idAd);
+        if(ad.isPresent()){
+            entity.setIdAd(ad.get().getIdAd());
+            entity.setUser(ad.get().getUser());
+            entity.setImmobile(ad.get().getImmobile());
+            adRepository.save(entity);
         }
-
     }
 
     public Ad find(int idAd){
         if(idAd == 0){
             return null;
         }
-        Optional<Ad> ad = AdRepository.findById(idAd);
+        Optional<Ad> ad = adRepository.findById(idAd);
         if(ad.isPresent()){
             return ad.get();
         }
@@ -69,16 +63,13 @@ public class AdService {
     }
 
     public ArrayList<Ad> findAll(){
-        return (ArrayList<Ad>) AdRepository.findAll();
+        return (ArrayList<Ad>) adRepository.findAll();
     }
 
     public void delete(int idAd){
-        Ad ad = find(idAd);
-        if(idAd!= 0){
-            AdRepository.delete(ad);
+        Optional<Ad> ad = adRepository.findById(idAd);
+        if(ad.isPresent()){
+            adRepository.delete(ad.get());
         }
     }
-
-
-
 }

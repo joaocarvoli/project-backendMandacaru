@@ -24,6 +24,7 @@ public class ImmobileService {
     public void update(int idImmobile, Immobile entity){
         Optional<Immobile> immobile = immobileRepository.findById(idImmobile);
         if(immobile.isPresent()){
+            entity.setIdImmobile(immobile.get().getIdImmobile());
             immobileRepository.save(entity);
         }
     }
@@ -44,12 +45,10 @@ public class ImmobileService {
     }
 
     public void delete(int idImmobile){
-        Optional<Immobile> immobile = immobileRepository.findById(idImmobile); // Necessário utilizar o método find e instanciar o objeto immobile sem o container Optional 
-
+        Optional<Immobile> immobile = immobileRepository.findById(idImmobile); // Necessário utilizar o método find e instanciar o objeto immobile sem o container Optional
         if(immobile.isPresent()){
             immobileRepository.delete(immobile.get());
         }
-
     }
 
 }
