@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "7c7444ea-ca7c-4702-a50a-0c0579cbbafa",
+		"name": "demoday",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16987712"
+	},
+	"item": [
+		{
+			"name": "immobile",
+			"item": [
+				{
+					"name": "Lista de imóveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista imóvel por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/4",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar imóvel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Casa do Mazin\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\",\n    \"squareMetersGround\":\"100\",\n    \"squareMetersBuilt\":\"67\",\n    \"roomsAmount\":\"7\",\n    \"bathAmount\":\"4\",\n    \"garageAmount\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/0",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de imóvel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Casa do Mazin\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\",\n    \"squareMetersGround\":\"100\",\n    \"squareMetersBuilt\":\"91\",\n    \"roomsAmount\":\"10\",\n    \"bathAmount\":\"4\",\n    \"garageAmount\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/5",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar imóvel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/immobile/3",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"immobile",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Lista de usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista usuários por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/7",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"João\",\n    \"email\":\"jv@gmail.com\",\n    \"password\":\"123456\",\n    \"cpf\":\"12345678910\",\n    \"phone\":\"85997046654\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/0",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de imóvel Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"João\",\n    \"email\":\"jv@gmail.com\",\n    \"password\":\"123456\",\n    \"cpf\":\"05668104338\",\n    \"phone\":\"85997046654\",\n    \"address\":\"Rua Professor Miramar da Ponte 1839\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/2",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar imóvel Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/users/2",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ad",
+			"item": [
+				{
+					"name": "Lista de anúncios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista anúncios por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/16",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar anúncios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adStatus\":\"false\",\n    \"price\":\"80000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/0?idUser=8&idImmobile=5",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"0"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "8"
+								},
+								{
+									"key": "idImmobile",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de anúncio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adStatus\":\"false\",\n    \"price\":\"120000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/19",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"19"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar anúncio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/17",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ADDRESS",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "PORT",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
