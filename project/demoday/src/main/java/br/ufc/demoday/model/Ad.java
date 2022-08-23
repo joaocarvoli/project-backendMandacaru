@@ -25,8 +25,9 @@ public class Ad {
 	@Id
 	@GeneratedValue
 	private int idAd;
-	private boolean adStatus;
+	private String adStatus;
 	private double price;
+	private boolean peding = false;
 	@ManyToOne
 	@JoinColumn(name="id_user") //ok
 	@JsonIgnore
@@ -40,10 +41,9 @@ public class Ad {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Ad(int idAd, boolean adStatus, double price, User user, Immobile immobile) {
+	public Ad(int idAd, double price, User user, Immobile immobile) {
 		super();
 		this.idAd = idAd;
-		this.adStatus = adStatus;
 		this.price = price;
 		this.user_ad = user;
 		this.immobile = immobile;
@@ -57,12 +57,13 @@ public class Ad {
 		this.idAd = idAd;
 	}
 
-	public boolean isAdStatus() {
-		return adStatus;
+	
+	public void setAdStatus(String adStatus) {
+		this.adStatus = adStatus;
 	}
 
-	public void setAdStatus(boolean adStatus) {
-		this.adStatus = adStatus;
+	public boolean getadStatus(){
+		return peding;
 	}
 
 	public double getPrice() {
