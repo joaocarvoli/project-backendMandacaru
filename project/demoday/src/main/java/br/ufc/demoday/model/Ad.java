@@ -25,9 +25,8 @@ public class Ad {
 	@Id
 	@GeneratedValue
 	private int idAd;
-	private String adStatus;
+	private String adStatus = "peding";
 	private double price;
-	private boolean peding = false;
 	@ManyToOne
 	@JoinColumn(name="id_user") //ok
 	@JsonIgnore
@@ -57,13 +56,13 @@ public class Ad {
 		this.idAd = idAd;
 	}
 
-	
+	//Atualização de set AdStatus
 	public void setAdStatus(String adStatus) {
 		this.adStatus = adStatus;
 	}
 
-	public boolean getadStatus(){
-		return peding;
+	public String getadStatus(){
+		return adStatus;
 	}
 
 	public double getPrice() {
