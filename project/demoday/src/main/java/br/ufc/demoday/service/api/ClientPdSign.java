@@ -8,13 +8,10 @@ import com.google.gson.JsonParser;
 import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.*;
 
-import com.google.gson.Gson;
-
 
 public class ClientPdSign {
     private final Dotenv dotenv = Dotenv.load();
-    private Gson gson = new Gson();
-    private HashMap<String, String> envs = new HashMap<>();
+    private final HashMap<String, String> envs = new HashMap<>();
     private void loadEnvs(){
         envs.put("baseUrl", dotenv.get("API_PD_TECH_URL"));
         envs.put("username", dotenv.get("USERNAME_PD_TECH"));
@@ -31,6 +28,7 @@ public class ClientPdSign {
                 .add("client_id", envs.get("clientId"))
                 .add("grant_type", envs.get("grantType"))
                 .build();
+
         Request request = new Request.Builder()
                 .url(envs.get("baseUrl"))
                 .post(formBody)
@@ -46,6 +44,7 @@ public class ClientPdSign {
                 return true;
             }
             return false;
+
 
         } catch (IOException e) {
             e.printStackTrace();
