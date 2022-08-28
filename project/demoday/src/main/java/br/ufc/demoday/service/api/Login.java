@@ -3,9 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
-
 import br.ufc.demoday.service.api.body.LoginBody;
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.github.cdimascio.dotenv.Dotenv;
@@ -22,10 +20,9 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
 
-public class ClientPdSign {
+public class Login {
     private final Dotenv dotenv = Dotenv.load();
     private final HashMap<String, String> envs = new HashMap<>();
-    private Gson gson = new Gson();
     private void loadEnvs(){
         envs.put("baseUrl", dotenv.get("LOGIN_URL"));
     }
@@ -51,6 +48,7 @@ public class ClientPdSign {
             if(statusCode == 200){
                 String responseBody = EntityUtils.toString(entity);
                 JsonObject jsonObject = (JsonObject) JsonParser.parseString(Objects.requireNonNull(responseBody));
+                System.out.println("JSON ACCESS: " + jsonObject.get("access_token"));
                 envs.put("access_token", String.valueOf(jsonObject.get("access_token")));
                 envs.put("refresh_token", String.valueOf(jsonObject.get("refresh_token")));
                 EntityUtils.consume(entity);
@@ -61,7 +59,7 @@ public class ClientPdSign {
     }
 
     public String getAccessToken(){
-        return envs.get("access_token");
+        return envs.get("access_token").substring(1, envs.get("access_token").length() - 1);
     }
     public String getRefreshToken(){
         return envs.get("refresh_token");

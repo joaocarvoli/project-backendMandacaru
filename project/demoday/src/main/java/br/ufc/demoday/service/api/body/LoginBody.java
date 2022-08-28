@@ -1,13 +1,11 @@
 package br.ufc.demoday.service.api.body;
 import io.github.cdimascio.dotenv.Dotenv;
 
-import java.util.HashMap;
-
 public class LoginBody {
-    private String username;
-    private String password;
-    private String client_id;
-    private String grant_type;
+    private final String username;
+    private final String password;
+    private final String client_id;
+    private final String grant_type;
 
     public LoginBody(){
         final Dotenv dotenv = Dotenv.load();
