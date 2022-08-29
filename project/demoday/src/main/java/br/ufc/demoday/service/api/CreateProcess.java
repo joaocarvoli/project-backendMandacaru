@@ -12,7 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.io.IOException;
 
@@ -43,7 +42,6 @@ public class CreateProcess {
         HttpPost httpPost = new HttpPost(envs.get("baseUrl") + "/processes");
         StringEntity stringEntity = new StringEntity(json, ContentType.APPLICATION_JSON);
         httpPost.setEntity(stringEntity);
-        System.out.println("THE TOKEN ON LOGIN PART IS: " + accessToken);
         httpPost.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
         httpPost.setHeader("Content-Type","application/json");
         try {
@@ -63,11 +61,11 @@ public class CreateProcess {
         }
     }
 
-    public String getAcessToken(){
+    public String getAccessToken(){
         return accessToken;
     }
     public String getProcessId(){
-        return envs.get("processId");
+        return envs.get("processId").substring(1, envs.get("processId").length() - 1);
     }
 }
 
