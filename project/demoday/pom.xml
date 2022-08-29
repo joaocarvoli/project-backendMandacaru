@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.ufc</groupId>
 	<artifactId>demoday</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.2.RELEASE</version>
 	<packaging>war</packaging>
 	<name>demoday</name>
 	<description>Desafio final demoday</description>
@@ -46,6 +46,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>42.4.1</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -81,7 +82,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+			</plugin>
 		</plugins>
+
 	</build>
 
 </project>
