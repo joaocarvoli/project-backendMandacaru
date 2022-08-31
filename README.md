@@ -8,16 +8,11 @@ O foco do desenvolvimento é no BackEnd da Aplicação em Java.
 ### Entendendo melhor a aplicação
 - [Fluxo da aplicação](/docs/README.md)
 
-## Como usar?
-
-```python
-...
-```
-
 ## Tecnologias
 
-- FrontEnd: ...
-- BackEnd: Java + o framework Spring 
+- FrontEnd: HTML, CSS, JavaScript, Thymeleaf e BootStrap
+- BackEnd: Java(Spring) e Keycloak 
 - Banco de Dados: Postgres
+- Infraestrutura: Docker
 
 <img src="/docs/logos/java.png" width="25"/> <img src="/docs/logos/spring.png" width="25"/> <img src="/docs/logos/postgres.svg.png" width="25"/>
