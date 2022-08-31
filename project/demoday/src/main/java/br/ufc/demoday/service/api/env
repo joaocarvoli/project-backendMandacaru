@@ -1,0 +1,11 @@
+LOGIN_URL=https://h-auth.portaldedocumentos.com.br/auth/realms/assinador/protocol/openid-connect/token
+BASE_URL=https://esign-api-pprd.portaldedocumentos.com.br
+USERNAME_PD_TECH=integracao.ufc@pd.tec.br
+PASSWORD_PD_TECH=3gpB9d*n
+CLIENT_ID_PD_TECH=assinador-app
+GRANT_TYPE_PD_TECH=password
+REQUESTER_ID=44afea47-2bfa-4380-9dae-e1e2ebe7a64d
+COMPANY_ID=036e8bc8-f964-4969-92c4-d255d258d941
+USERNAME_API="Anderson Almada"
+USER_EMAIL="almada@crateus.ufc.br"
+DOCUMENT_ID="427.332.620-50"
