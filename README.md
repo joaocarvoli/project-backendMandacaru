@@ -11,7 +11,8 @@ O foco do desenvolvimento é no BackEnd da Aplicação em Java.
 ## Tecnologias
 
 - FrontEnd: HTML, CSS, JavaScript, Thymeleaf e BootStrap
-- BackEnd: Java + o framework Spring 
+- BackEnd: Java(Spring) e Keycloak 
 - Banco de Dados: Postgres
+- Infraestrutura: Docker
 
 <img src="/docs/logos/java.png" width="25"/> <img src="/docs/logos/spring.png" width="25"/> <img src="/docs/logos/postgres.svg.png" width="25"/>
