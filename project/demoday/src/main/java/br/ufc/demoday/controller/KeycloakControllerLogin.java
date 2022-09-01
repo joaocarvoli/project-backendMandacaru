@@ -1,32 +1,19 @@
 package br.ufc.demoday.controller;
 
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
-
-//@RestController
-//@RequestMapping(path = "/")
-
-@Controller
-@PreAuthorize("isAuthenticated()")
+@RestController
 public class KeycloakControllerLogin {
 
-
-		//@Autowired
-		//KeyCloakController service;
-
-   @GetMapping(path = "/")
-   public String index() {
-	   return "index";
+   @RequestMapping("/api")
+   public ModelAndView index() {
+       ModelAndView modelAndView = new ModelAndView();
+       modelAndView.setViewName("index");
+       return modelAndView;
 	 }
-
-   @GetMapping(path = "/api")
-   public String secure(Model model) {
-	 model.addAttribute("message", "Está em uma pagina segura!");
-	 	return "secure";
-   }
-		
-		
 }

@@ -15,12 +15,15 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       # Keycloak conf
       server.port: 8081
-      keycloak.auth-server-url: http://keycloak:8080/auth/
-      keycloak.realm: "Demoday"
-      keycloak.resource: "login-app"
-      keycloak.public-client: "true"
-      keycloak.security-constraints.authRoles: "user"
-      keycloak.security-constraints.securityCollections.patterns: "/api/*"
+      spring.security.oauth2.resourceserver.jwt.jwk-set-uri: http://3.211.211.163:8080/auth/realms/Demoday/protocol/openid-connect/certs
+      spring.mvc.view.suffix: .html
+      keycloak.realm: Demoday
+      keycloak.resource: login-app
+      keycloak.public-client: "false"
+      keycloak.credentials.secret: "${SECRET_KEYCLOAK}"
+      keycloak.use-resource-role-mappings: "true"
+      keycloak.security-constraints.authRoles: user
+      keycloak.security-constraints.securityCollections.patterns: /api/*
     ports:
       - "8081:8081"
 
@@ -48,6 +51,12 @@ services:
       DB_URL: jdbc:postgresql://postgres:5432/demoday
       KEYCLOAK_USER: "${KEYCLOAK_USER}"
       KEYCLOAK_PASSWORD: "${KEYCLOAK_PASSWORD}"
+      KEYCLOAK_PROXY: edge
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_HTTPS_ENABLED: "true"
+    volumes:
+      - keycloak-data:/var/lib/keycloak/data
     ports:
       - "8080:8080"
     depends_on:
@@ -69,3 +78,4 @@ services:
 volumes:
   postgres_data:
   pgadmin:
+  keycloak-data:
