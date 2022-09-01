@@ -47,10 +47,8 @@ public class AdController {
     }
 
     @PostMapping("/{idAd}/process/document")
-    public ResponseEntity<String> receive(@PathVariable int idAd, /* @PathVariable int idDocument) idDocumente/ ){
+    public ResponseEntity<String> receive(@PathVariable int idAd, @PathVariable int idDocument){
         // adService.receive(idAd, IdDocument);
-
-
     }
 
 
