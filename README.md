@@ -40,3 +40,6 @@
 
 # Se liga na Api mah ⚡
    Primeiramente o uh fluxo - [Se despe!!](/docs/README.md)
+   
+   # Falando um pouco sobre segurança!
+   No projeto utilizamos um servidor de autorição e autenticação keyclock! O keyclock é uma ferramenta que permite a gerencia de perfis de usuários com configurações e customizações que permitem adequar o funcionamento do sistema a diferentes perfis de permissões e autenticação facilitando a gerência de usuários e politicas de acesso a recursos da aplicação.
