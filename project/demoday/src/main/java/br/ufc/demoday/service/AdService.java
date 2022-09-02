@@ -55,15 +55,15 @@ public class AdService {
         if(idAd == 0){
             return null;
         }
-        Optional<Ad> ad = adRepository.findById(idAd);
-        if(ad.isPresent()){
-            return ad.get();
+        Ad ad = adRepository.findNotPendingById(idAd);
+        if(ad != null){
+            return ad;
         }
         return null;
     }
 
     public ArrayList<Ad> findAll(){
-        return (ArrayList<Ad>) adRepository.findAll();
+        return adRepository.findNotPending();
     }
 
     public void delete(int idAd){

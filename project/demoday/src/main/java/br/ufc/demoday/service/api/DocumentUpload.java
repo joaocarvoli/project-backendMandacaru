@@ -1,6 +1,4 @@
 package br.ufc.demoday.service.api;
-
-import br.ufc.demoday.service.api.body.DocumentProcessBody;
 import br.ufc.demoday.service.api.body.ProcessStatus;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

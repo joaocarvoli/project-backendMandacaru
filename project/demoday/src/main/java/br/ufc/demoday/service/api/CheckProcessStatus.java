@@ -32,7 +32,7 @@ public class CheckProcessStatus {
         accessToken = process.getAccessToken();
     }
 
-    public boolean doCheck(){
+    private boolean doCheck(){
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(envs.get("baseUrl") + "/processes/" + processId);
         httpGet.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
@@ -55,5 +55,10 @@ public class CheckProcessStatus {
             e.printStackTrace();
             return false;
         }
+    }
+    public void checkByTimes() throws InterruptedException {
+        do {
+            Thread.sleep(240000); // 3 minutes = 240000 milliseconds
+        } while (!doCheck());
     }
 }
