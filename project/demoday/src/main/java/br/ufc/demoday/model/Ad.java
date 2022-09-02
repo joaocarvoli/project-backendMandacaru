@@ -25,7 +25,7 @@ public class Ad {
 	@Id
 	@GeneratedValue
 	private int idAd;
-	private String adStatus = "pending";
+	private String adStatus = "peding";
 	private double price;
 	@ManyToOne
 	@JoinColumn(name="id_user") //ok

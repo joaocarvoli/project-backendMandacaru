@@ -17,9 +17,9 @@ public class ProcessBody {
         HashMap<String, String> envs = new HashMap<>();
         envs.put("requesterId", dotenv.get("REQUESTER_ID"));
         envs.put("companyId", dotenv.get("COMPANY_ID"));
-        //envs.put("username", dotenv.get("USERNAME_API"));
-        //envs.put("userEmail", dotenv.get("USER_EMAIL"));
-        //envs.put("documentId", dotenv.get("DOCUMENT_ID"));
+        envs.put("username", dotenv.get("USERNAME_API"));
+        envs.put("userEmail", dotenv.get("USER_EMAIL"));
+        envs.put("documentId", dotenv.get("DOCUMENT_ID"));
         return envs;
     }
     public ProcessBody(){
@@ -28,19 +28,17 @@ public class ProcessBody {
         company = new Company();
         flow = new Flow();
         members = new ArrayList<>();
+        members.add(0, new Member());
         title = "Teste apresentacao";
         requester.setId("44afea47-2bfa-4380-9dae-e1e2ebe7a64d");
         company.setId(envs.get("companyId"));
         flow.setDefineOrderOfInvolves(true);
         flow.setHasExpiration(true);
         flow.setExpiration("2022-12-30");
-    }
-    public void addMember(String username, String userEmail, String documentId){
-        members.add(0, new Member());
-        members.get(0).setName(username);
-        members.get(0).setEmail(userEmail);
+        members.get(0).setName(envs.get("username"));
+        members.get(0).setEmail(envs.get("userEmail"));
         members.get(0).setDocumentType("CPF");
-        members.get(0).setDocumentCode(documentId);
+        members.get(0).setDocumentCode(envs.get("documentId"));
     }
 }
 

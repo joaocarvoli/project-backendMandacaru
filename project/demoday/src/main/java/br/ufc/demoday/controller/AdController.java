@@ -4,15 +4,14 @@ import br.ufc.demoday.service.AdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import java.util.Has
 
 import java.util.ArrayList;
 
 
 @RestController
 @RequestMapping(path = "/api/ads")
-//@PreAuthorize("isAuthenticated()")
 public class AdController {
 
     @Autowired
@@ -40,4 +39,19 @@ public class AdController {
     public void delete(@PathVariable int idAd){
         adService.delete(idAd);
     }
+
+    @PostMapping("/{idAd}/process")
+    public ResponseEntity<String> toReceive(@PathVariable int idAd, @RequestBody Process process) ){
+       // adService.toRecive(idAd, process);
+
+    }
+
+    @PostMapping("/{idAd}/process/document")
+    public ResponseEntity<String> receive(@PathVariable int idAd, @PathVariable int idDocument){
+        // adService.receive(idAd, IdDocument);
+    }
+
+
+
 }
+
