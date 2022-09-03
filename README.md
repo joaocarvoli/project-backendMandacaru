@@ -40,8 +40,7 @@
 
 
    
-   # Falando um pouco sobre segurança!
-   
+   # Falando um pouco sobre segurança🤝
    No projeto utilizamos um servidor de autorização e autenticação keyclock! O keyclock é uma ferramenta <i>Open-Source</i> que permite a gerencia de perfis de usuários com configurações e customizações de forma a adequar o funcionamento do sistema a diferentes perfis de permissões e autenticação facilitando a gerência de usuários e politicas de acesso a recursos da aplicação.
    
    Dentre as funcionalidades ofertadas pelo keyclock podemos destacar:
