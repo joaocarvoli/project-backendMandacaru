@@ -13,14 +13,7 @@
 					"name": "Lista de imóveis",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{TOKEN_KEYCLOAK_REALMS}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
@@ -54,14 +47,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/immobile/4",
+							"raw": "{{API_ADDRESS}}/api/immobile/1",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
 							"path": [
 								"api",
 								"immobile",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -361,7 +354,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/",
+							"raw": "{{API_ADDRESS}}/api/ads/?pending=true",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
@@ -373,8 +366,12 @@
 							"query": [
 								{
 									"key": "",
-									"value": null,
+									"value": "",
 									"disabled": true
+								},
+								{
+									"key": "pending",
+									"value": "true"
 								}
 							]
 						}
@@ -397,7 +394,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/3",
+							"raw": "{{API_ADDRESS}}/api/ads/3?pending=true",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
@@ -405,6 +402,17 @@
 								"api",
 								"ads",
 								"3"
+							],
+							"query": [
+								{
+									"key": "pending",
+									"value": "true"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -435,7 +443,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ADDRESS}}/api/ads/0?idUser=2&idImmobile=1",
+							"raw": "{{API_ADDRESS}}/api/ads/0?idUser=13&idImmobile=14",
 							"host": [
 								"{{API_ADDRESS}}"
 							],
@@ -447,12 +455,99 @@
 							"query": [
 								{
 									"key": "idUser",
-									"value": "2"
+									"value": "13"
 								},
 								{
 									"key": "idImmobile",
-									"value": "1"
+									"value": "14"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar processo para a assinatura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_KEYCLOAK_REALMS}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\":[\n        {\n            \"name\":\"Maria das Graças\",\n            \"email\": \"jvcarvoli@gmail.com\",\n            \"cpf\":\"123.456.789-10\"\n        },\n        {\n            \"name\":\"João Victor Carvalho\",\n            \"email\": \"joaocarvoli@hotmail.com\",\n            \"cpf\":\"123.456.789-10\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/16/create_process",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"16",
+								"create_process"
+							],
+							"query": [
+								{
+									"key": "idAd",
+									"value": "16",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar documento para a assinatura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_KEYCLOAK_REALMS}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/joaocarvoli/Desktop/me/cartaz-look.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_ADDRESS}}/api/ads/3/create_process/upload_document",
+							"host": [
+								"{{API_ADDRESS}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"3",
+								"create_process",
+								"upload_document"
 							]
 						}
 					},
@@ -585,7 +680,7 @@
 								},
 								{
 									"key": "client_secret",
-									"value": "5M9IllkoPlroorgJzPTRqZ6EWIacSm1Q",
+									"value": "5QJqstBCDpTRfpb71c5LgNuqEEn3I5K9",
 									"type": "text"
 								},
 								{
