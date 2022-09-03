@@ -25,7 +25,7 @@ public class Ad {
 	@Id
 	@GeneratedValue
 	private int idAd;
-	private boolean adStatus;
+	private String adStatus = "pending";
 	private double price;
 	@ManyToOne
 	@JoinColumn(name="id_user") //ok
@@ -40,10 +40,9 @@ public class Ad {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Ad(int idAd, boolean adStatus, double price, User user, Immobile immobile) {
+	public Ad(int idAd, double price, User user, Immobile immobile) {
 		super();
 		this.idAd = idAd;
-		this.adStatus = adStatus;
 		this.price = price;
 		this.user_ad = user;
 		this.immobile = immobile;
@@ -57,12 +56,13 @@ public class Ad {
 		this.idAd = idAd;
 	}
 
-	public boolean isAdStatus() {
-		return adStatus;
+	//Atualização de set AdStatus
+	public void setAdStatus(String adStatus) {
+		this.adStatus = adStatus;
 	}
 
-	public void setAdStatus(boolean adStatus) {
-		this.adStatus = adStatus;
+	public String getadStatus(){
+		return adStatus;
 	}
 
 	public double getPrice() {
