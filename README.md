@@ -112,7 +112,7 @@ Para salvar um usuário o idUser tem que ser igual a zero.
 | `userId`      | `int` | **Obrigatório**. O ID do usuário que será deletado. |
 
 
-# Oia a documentação mah 📄
+
 #### Retorna todos os Imóveis cadastrados
 
 ```http
