@@ -1,22 +1,23 @@
-# Olá somos o Squad01👋, (Quem é vocês mah?)
+# Olá somos o Squad01👋, (Quem são vocês mah?)
 
-    Nosso squad é formado por Daniel, João, Brizamar, lidia e jorge.
+    Nosso squad é formado por Daniel, João, Brizamar, Lídia e Jorge.
 
 ​
 
 # E esse é o nosso Projeto Demoday 👨‍💻 
 
-    Desenvolvevemos um sistema de compra e venda de imóveis. 
+    Sistema de compra e venda de imóveis, integrado com API de validação(PDSing) sedida pela empresa Portal de documentos. 
 
 ​
 
 # Objetivo do Projeto🌱
 
-    Ser inovador como um produto autonomo e resposável. 
+    Desenvolver um produto(MVP) com tecnologias atualmente utilizadas no mercado de desenvolvimento de software, 
+    somando criatividade, inovação, metodologias ágeis com compromisso e respossabilidade. 
 
 ​
 
-# Mas, eai? Qual foram as tecnologias utilizadas? 📝
+# Mas, e ai? Quais foram as tecnologias utilizadas? 📝
 
        -Fale-me mais? 💬 
 
@@ -31,10 +32,17 @@
 
 - Infraestrutura: Docker e AWS
 
-- Versionamento: Git
+- Versionamento: Git e GitHub
+
+- Gerenciamento: Jira
 
 ​
-<p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>  <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://www.thymeleaf.org" target="_blank" rel="noreferrer"> <img src="https://www.thymeleaf.org/images/thymeleaf.png" alt="postgresql" width="40" height="40"/>  <a href="https://www.keycloak.org" target="_blank" rel="noreferrer"> <img src="https://www.marcus-povey.co.uk/wp-content/avatar.png" alt="postgresql" width="40" height="40"/>  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a><a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>  <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://www.thymeleaf.org" target="_blank" rel="noreferrer"> <img src="https://www.thymeleaf.org/images/thymeleaf.png" alt="postgresql" width="40" height="40"/>  <a href="https://www.keycloak.org" target="_blank" rel="noreferrer"> <img src="https://www.marcus-povey.co.uk/wp-content/avatar.png" alt="postgresql" width="40" height="40"/>  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a><a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 
+<a href="/imgres?imgurl=https%3A%2F%2Fwac-cdn.atlassian.com%2Fdam%2Fjcr%3A5cae308d-24a4-40d0-8fe2-ce7f46cd7a02%2FJSW%2520sign-responsive.png%3FcdnVersion%3D505&amp;imgrefurl=https%3A%2F%2Fwww.atlassian.com%2Fbr%2Fsoftware%2Fjira&amp;tbnid=Ztumkcapvem6CM&amp;vet=12ahUKEwjlqIyyxPf5AhUXNrkGHZ6pCSkQMyg1egQIARBq..i&amp;docid=7VnjCR0uh72VwM&amp;w=200&amp;h=200&amp;q=jira&amp;ved=2ahUKEwjlqIyyxPf5AhUXNrkGHZ6pCSkQMyg1egQIARBq" data-navigation="server" target="_blank" rel="noreferrer"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX28bys6e50wdjOWRT-qv0IkfxgYavh38eag&amp;usqp=CAU" style=width="40" height="40" alt="Jira></a>  
+ <a href="https://github.com/logos" target="_blank" rel="noreferrer"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="width: 40px; height: 40px;"></a>   
+    </p>
+    
+
 
 ​
 
@@ -57,12 +65,18 @@
     
 # Título do Projeto👯
     
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
+Demoday-App
 
 # Se liga na Api mah ⚡
    Primeiramente o uh fluxo - [Se despe!!](/docs/README.md)
    
 # Oia a documentação mah 📄
+    
+#### Index de acesso ao login keycloak
+    
+```http
+  GET /index
+``` 
 #### Retorna todos os usuários cadastrados
 
 ```http
