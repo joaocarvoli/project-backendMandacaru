@@ -1,0 +1,81 @@
+version: '3'
+
+services:
+  demoday-app:
+    image: 'docker-spring-boot-postgres:latest'
+    container_name: demoday_app
+    build:
+      context: .
+    depends_on:
+    - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/demoday
+      SPRING_DATASOURCE_USERNAME: "${DB_USER}"
+      SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      # Keycloak conf
+      server.port: 8081
+      spring.security.oauth2.resourceserver.jwt.jwk-set-uri: http://3.211.211.163:8080/auth/realms/Demoday/protocol/openid-connect/certs
+      spring.mvc.view.suffix: .html
+      keycloak.realm: Demoday
+      keycloak.resource: login-app
+      keycloak.public-client: "false"
+      keycloak.credentials.secret: "${SECRET_KEYCLOAK}"
+      keycloak.use-resource-role-mappings: "true"
+      keycloak.security-constraints.authRoles: user
+      keycloak.security-constraints.securityCollections.patterns: /api/*
+    ports:
+      - "8081:8081"
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "${DB_USER}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+    ports:
+      - "5432:5432"
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:legacy
+    container_name: keycloak
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: demoday
+      DB_USER: "${DB_USER}"
+      DB_SCHEMA: public
+      DB_PASSWORD: "${DB_PASSWORD}"
+      DB_URL: jdbc:postgresql://postgres:5432/demoday
+      KEYCLOAK_USER: "${KEYCLOAK_USER}"
+      KEYCLOAK_PASSWORD: "${KEYCLOAK_PASSWORD}"
+      KEYCLOAK_PROXY: edge
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_HTTPS_ENABLED: "true"
+    volumes:
+      - keycloak-data:/var/lib/keycloak/data
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  pgadmin:
+  keycloak-data:
