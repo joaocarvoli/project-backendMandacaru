@@ -56,4 +56,59 @@
     Criação de permissões que o sistema vai usar;
     Criação de grupos de usuário.
     
+    
+# Título do Projeto
+
+Uma breve descrição sobre o que esse projeto faz e para quem ele é
+
+
+## Documentação da API
+
+#### Retorna todos os usuários cadastrados
+
+```http
+  GET /api/users
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `()` | `()` | Chamada direta  ao procedimento para listagem de todos os usuários. |
+
+#### Retorna um usuário
+
+```http
+  GET /api/users/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `userId`      | `int` | **Obrigatório**. O ID do usuário para busca. |
+
+```http
+  POST /api/users/${id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `userId`      | `int` | **Obrigatório**. O ID do usuário para salvar. |
+| `user`      | `User` | **Obrigatório**. O 'user' a ser salvo.  |
+
+Para salvar um usuário o idUser tem que ser igual a zero.
+
+```http
+  PUT /api/users/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `userId`      | `int` | **Obrigatório**. O ID do usuário para atualização. |
+| `user`      | `User` | **Obrigatório**. Objeto 'user' a ser salvo.  |
+
+
+```http
+  DELET /api/users/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `userId`      | `int` | **Obrigatório**. O ID do usuário que será deletado. |
 
