@@ -16,7 +16,7 @@
 
 ​
 
-# Mas, eai qual foram as tecnologias utilizadas 📝
+# Mas, eai? Qual foram as tecnologias utilizadas? 📝
 
        -Fale-me mais? 💬 
 
@@ -110,4 +110,55 @@ Para salvar um usuário o idUser tem que ser igual a zero.
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `userId`      | `int` | **Obrigatório**. O ID do usuário que será deletado. |
+
+
+# Oia a documentação mah 📄
+#### Retorna todos os Imóveis cadastrados
+
+```http
+  GET /api/immobile
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `()` | `()` | Chamada direta  ao procedimento para listagem de todos os imóveis. |
+
+#### Retorna um imóvel
+
+```http
+  GET /api/immobile/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `immobileId`      | `int` | **Obrigatório**. O ID do imóvel para busca. |
+
+```http
+  POST /api/immobile/${id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `immobileId`      | `int` | **Obrigatório**. O ID do imóvel para salvar. |
+| `immobile`      | `Immobile` | **Obrigatório**. O 'immobile' a ser salvo.  |
+
+Para salvar um Imóvel o idImmobile tem que ser igual a zero.
+
+```http
+  PUT /api/immobile/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `immobileId`      | `int` | **Obrigatório**. O ID do imóvel para atualização. |
+| `immobile`      | `Immobile` | **Obrigatório**. Objeto 'immobile' a ser salvo.  |
+
+
+```http
+  DELET /api/immobile/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `immobileId`      | `int` | **Obrigatório**. O ID do imóvel que será deletado. |
+
 
