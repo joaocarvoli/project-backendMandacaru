@@ -161,4 +161,32 @@ Para salvar um Imóvel o idImmobile tem que ser igual a zero.
 | :---------- | :--------- | :------------------------------------------ |
 | `immobileId`      | `int` | **Obrigatório**. O ID do imóvel que será deletado. |
 
+    
+#### Retorna todos os idAd
+
+```http
+  GET "/{idAd}"
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `AdController` | `()` | `Chamada direta` |
+
+#### Retorna um idAd
+
+```http
+  GET/{idAd}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `()` | `**Obrigatório**. http Status`|
+
+```http
+  GET/{idAd}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idAd`      | `()` | `**Obrigatório**. retorna ad`|
 
