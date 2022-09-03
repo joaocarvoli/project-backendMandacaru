@@ -1,4 +1,4 @@
-# Olá somos o Sqaud01👋, (Quem é vocês mah?)
+# Olá somos o Squad01👋, (Quem é vocês mah?)
 
     Nosso squad é formado por Daniel, João, Brizamar, lidia e jorge.
 
